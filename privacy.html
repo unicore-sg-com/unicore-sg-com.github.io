@@ -1,213 +1,348 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Unicore Tech SG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #1a1814;
+      --ink-light: #4a4540;
+      --ink-faint: #8a8480;
+      --rule: #d8d0c8;
+      --bg: #faf8f5;
+      --bg-warm: #f2ede6;
+      --accent: #b5451b;
+      --accent-light: #f5ece8;
+    }
 
-	<title>UNICORE TECH Privacy Policy</title>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem 0 2rem;
+      background: var(--bg);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .header-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+    }
+    .brand {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .brand span { color: var(--accent); }
+    .header-divider { color: var(--rule); font-weight: 300; }
+    .header-label {
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 3rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .hero-eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      font-size: 0.88rem;
+      color: var(--ink-faint);
+    }
+    .hero-meta strong { color: var(--ink-light); font-weight: 400; }
+
+    /* ── Layout ── */
+    .document {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 3rem 2rem 6rem;
+    }
+
+    /* ── Section ── */
+    section { margin-bottom: 3rem; }
+
+    h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 1.1em;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      color: var(--ink);
+      margin-top: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p { margin-bottom: 1rem; color: var(--ink-light); }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    a:hover { border-color: var(--accent); }
+
+    /* ── Partner list ── */
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .partner-item {
+      background: var(--bg-warm);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.88rem;
+    }
+    .partner-item a { font-size: 0.78rem; display: block; color: var(--ink-faint); margin-top: 0.1rem; }
+    .partner-item a:hover { color: var(--accent); }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: var(--accent-light);
+      border: 1px solid #dfc5bc;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+    .contact-box p { color: var(--ink-light); margin-bottom: 0.4rem; }
+    .contact-box a { font-weight: 400; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink-faint);
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; gap: 0.3rem; }
+      .header-divider { display: none; }
+      .partner-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-
 <body>
-	<h1 align="center">UNICORE TECH Privacy Policy</h1>
-	<p>This Privacy Policy is effective as of 2022/07/18.<br>
-		Owner:UNICORE TECH</p>
-	<h3>INTRODUCTION</h3>
-	<p>The developer of the App and its affiliates and subsidiaries (collectively, “we”, “us” or “our”) provide this
-		privacy policy (“Privacy Policy”) applies to your access and use of the mobile applications created by Skyfun
-		Games
-		to help you understand what information we collect, how we use such information, and the recipients with whom we
-		share such information. The App and any data, products, services and associated materials or media supplied with
-		the App are collectively referred to as the “Services”.</p>
-	<p>
-		This Privacy Policy is incorporated into and made a part of the End User License Agreement, which governs your
-		use of the Services and limits our liability to you. By using our Services, you agree that we may treat your
-		information in the ways we describe in this Privacy Policy. If you do not agree with any term of this Privacy
-		Policy or the End User License Agreement, DO NOT USE OUR SERVICES.
-	</p>
 
-	<h3>
-		WHAT KIND OF YOUR PERSONAL INFORMATION WILL BE COLLECTED
-	</h3>
-	<p>
-		Personal Information Collected by Us <br><br>
-		Log Information <br>
-		This is certain log file information our servers automatically record when you visit the Services, such as your
-		country, operating system, access times, pages viewed, links clicked and other information about your activities
-		on the Services.<br><br>
-		Transaction Information <br>
-		When you purchase any services from us, we may collect information to complete such transaction, such as your
-		Google Account/Apple ID, your payment card type; however, we do not collect or store full payment card numbers.
-		Please note that all transactions are processed by our third-party payment processor.<br><br>
-		Mobile Device Information<br>
-		We collect information about the mobile device you use to access or use the Services, including the hardware
-		model, operating system and version, unique device identifiers, device manufacturer, GAID/IDFA, Android ID/UDID,
-		IMEI, mobile network information and information about your use of the Services.<br><br>
-		Information Collected by Third-Party Partners<br>
-		Our third-party partners may use tracking technologies to collect information about your use of the Services and
-		other websites in order to serve advertisements to you on our behalf, provide analytics services or provide
-		other services in the App. Such information includes your IP address, web browser, pages viewed, time spent on
-		pages, links clicked and conversion information. You can contact us at admin@unicore-sg.com if you want
-		our
-		third-party partners to stop collecting your personal information. Please note that if our third-party partner
-		stop collecting your personal information, the advertisements you see will be less relevant to you, but the
-		number of them will not change.<br><br>
-		Other Information You Choose to Provide to or Automatically Collected by Us<br>
-		This is the information you provide to us when you participate in a survey, contest, promotion or interactive
-		area of the Services or when you request technical or customer support.
-	</p>
+<header>
+  <div class="header-inner">
+    <a class="brand" href="/">Unicore<span>.</span></a>
+    <span class="header-divider">|</span>
+    <span class="header-label">Legal &amp; Privacy</span>
+  </div>
+</header>
 
-	<h3>
-		HOW WE USE YOUR PERSONAL INFORMATION
-	</h3>
-	<p>
-		We may use information about you for various purposes, including to:<br>
-		Provide, maintain and improve the Services;<br>
-		Send you related information, including confirmations, updates, technical notices, security alerts and support
-		and administrative messages;<br>
-		Provide customer service;<br>
-		Respond to and communicate with you about the Services and other information may be of interest to you;
-		Monitor and analyze trends, usage and activities in connection with the Services;<br>
-		Protect you from fraudulent transactions and other illegal activities and protect our and others’ rights and
-		property;<br>
-		Personalize and improve your experience with the Services and provide advertisements, content and features that
-		match your profile or interests;<br>
-		Achieve other purposes.<br>
-	</p>
+<div class="hero">
+  <p class="hero-eyebrow">Legal Document</p>
+  <h1>Privacy Policy</h1>
+  <div class="hero-meta">
+    <span><strong>Effective date:</strong> 2025/07/18</span>
+    <span><strong>Owner:</strong> Unicore Tech SG Pte. Ltd.</span>
+  </div>
+</div>
 
-	<h3>
-		HOW WE SHARE YOUR PERSONAL INFORMATION
-	</h3>
-	<p>
-		Requirements of Law <br>
-		We may share your information in response to a request for information if we believe disclosure is in accordance
-		with, or required by, any applicable law, rule, regulation or legal process.<br><br>
-		With necessary third parties<br>
-		We may share your information with vendors, partners and other service providers who need access to such
-		information to carry out work on our behalf, provide products or services to us or to you or help us market or
-		advertise to you (including co-branded marketing and advertising).<br>
-		When you participate in the interactive areas of the Services or interact with us on third party social media
-		sites, certain information that you provide may be displayed publicly, such as your name, photos and other
-		information you choose to provide.<br>
-		We also provide information and content to research partners and academics to conduct research that advances
-		scholarship and innovation that support our business or mission, and enhances discovery and innovation on topics
-		of general social welfare, technological advancement, public interest, health, and well-being.<br><br>
-		Other Situations<br>
-		We may also share your information:<br>
-		If we believe your actions are inconsistent with our End User License Agreement or other policies, or to protect
-		our and other parties’ rights, property or safety.<br>
-		In connection with, or during negotiations of, any merger, acquisition, sale of assets or any business, other
-		change of control transaction or financing.<br>
-		Between and among us and any current or future parent, subsidiary and/or affiliated company.<br>
-		With your consent or at your direction.<br>
-		We also may share aggregated or de-identified information, which cannot reasonably be used to identify you.<br>
+<main class="document">
 
-	</p>
-	<p>
-		Those partners usually collect data via their own tools (Software Development Kits or “SDK”). You will find a
-		list of our partners implementing advertising SDKs through our applications and the privacy policies of their
-		services that describe their practices and allow you to exercise your rights directly toward them
-		hereafter:<br><br>
+  <section>
+    <h2>Introduction</h2>
+    <p>The developer of the App and its affiliates and subsidiaries (collectively, "we", "us" or "our") provide this privacy policy ("Privacy Policy") applies to your access and use of the mobile applications created by Kingboat to help you understand what information we collect, how we use such information, and the recipients with whom we share such information. The App and any data, products, services and associated materials or media supplied with the App are collectively referred to as the "Services".</p>
+    <p>This Privacy Policy is incorporated into and made a part of the End User License Agreement, which governs your use of the Services and limits our liability to you. By using our Services, you agree that we may treat your information in the ways we describe in this Privacy Policy. If you do not agree with any term of this Privacy Policy or the End User License Agreement, <strong>DO NOT USE OUR SERVICES</strong>.</p>
+  </section>
 
-		AdColony - https://www.adcolony.com/privacy-policy/<br>
+  <section>
+    <h2>What Personal Information We Collect</h2>
+    <p><em>Personal Information Collected by Us</em></p>
 
-		AppLovin - https://www.applovin.com/privacy/<br>
+    <h3>Log Information</h3>
+    <p>This is certain log file information our servers automatically record when you visit the Services, such as your country, operating system, access times, pages viewed, links clicked and other information about your activities on the Services.</p>
 
-		Chartboost - https://answers.chartboost.com/en-us/articles/200780269<br>
+    <h3>Transaction Information</h3>
+    <p>When you purchase any services from us, we may collect information to complete such transaction, such as your Google Account/Apple ID, your payment card type; however, we do not collect or store full payment card numbers. Please note that all transactions are processed by our third-party payment processor.</p>
 
-		Facebook - https://www.facebook.com/about/privacy<br>
+    <h3>Mobile Device Information</h3>
+    <p>We collect information about the mobile device you use to access or use the Services, including the hardware model, operating system and version, unique device identifiers, device manufacturer, GAID/IDFA, Android ID/UDID, IMEI, mobile network information and information about your use of the Services.</p>
 
-		Fyber - https://www.fyber.com/privacy-policy/<br>
+    <h3>Information Collected by Third-Party Partners</h3>
+    <p>Our third-party partners may use tracking technologies to collect information about your use of the Services and other websites in order to serve advertisements to you on our behalf, provide analytics services or provide other services in the App. Such information includes your IP address, web browser, pages viewed, time spent on pages, links clicked and conversion information. You can contact us at <a href="mailto:feedback@kingboat.io">feedback@kingboat.io</a> if you want our third-party partners to stop collecting your personal information. Please note that if our third-party partner stop collecting your personal information, the advertisements you see will be less relevant to you, but the number of them will not change.</p>
 
-		Google AdMob - https://policies.google.com/privacy?hl=en <br>
+    <h3>Other Information</h3>
+    <p>This is the information you provide to us when you participate in a survey, contest, promotion or interactive area of the Services or when you request technical or customer support.</p>
+  </section>
 
-		InMobi - https://www.inmobi.com/privacy-policy/<br>
+  <section>
+    <h2>How We Use Your Personal Information</h2>
+    <p>We may use information about you for various purposes, including to:</p>
+    <ul style="padding-left:1.4rem; color: var(--ink-light); line-height:2;">
+      <li>Provide, maintain and improve the Services;</li>
+      <li>Send you related information, including confirmations, updates, technical notices, security alerts and support and administrative messages;</li>
+      <li>Provide customer service;</li>
+      <li>Respond to and communicate with you about the Services and other information that may be of interest to you;</li>
+      <li>Monitor and analyze trends, usage and activities in connection with the Services;</li>
+      <li>Protect you from fraudulent transactions and other illegal activities and protect our and others' rights and property;</li>
+      <li>Personalize and improve your experience with the Services and provide advertisements, content and features that match your profile or interests;</li>
+      <li>Achieve other purposes.</li>
+    </ul>
+  </section>
 
-		IronSource - https://developers.ironsrc.com/ironsour ce-mobile/air/ironsource-mobile-privacy-policy/<br>
+  <section>
+    <h2>How We Share Your Personal Information</h2>
 
-		Mintegral - https://www.mintegral.com/en/privacy/<br>
+    <h3>Requirements of Law</h3>
+    <p>We may share your information in response to a request for information if we believe disclosure is in accordance with, or required by, any applicable law, rule, regulation or legal process.</p>
 
-		Pangle - https://www.pangleglobal.com/privacy<br>
+    <h3>With Necessary Third Parties</h3>
+    <p>We may share your information with vendors, partners and other service providers who need access to such information to carry out work on our behalf, provide products or services to us or to you or help us market or advertise to you (including co-branded marketing and advertising).</p>
+    <p>When you participate in the interactive areas of the Services or interact with us on third party social media sites, certain information that you provide may be displayed publicly, such as your name, photos and other information you choose to provide.</p>
+    <p>We also provide information and content to research partners and academics to conduct research that advances scholarship and innovation that support our business or mission, and enhances discovery and innovation on topics of general social welfare, technological advancement, public interest, health, and well-being.</p>
 
-		Tapjoy - https://www.tapjoy.com/legal/tapjoy-users/#privacy-policy<br>
+    <h3>Other Situations</h3>
+    <p>We may also share your information:</p>
+    <ul style="padding-left:1.4rem; color: var(--ink-light); line-height:2;">
+      <li>If we believe your actions are inconsistent with our End User License Agreement or other policies, or to protect our and other parties' rights, property or safety.</li>
+      <li>In connection with, or during negotiations of, any merger, acquisition, sale of assets or any business, other change of control transaction or financing.</li>
+      <li>Between and among us and any current or future parent, subsidiary and/or affiliated company.</li>
+      <li>With your consent or at your direction.</li>
+    </ul>
+    <p style="margin-top:1rem;">We also may share aggregated or de-identified information, which cannot reasonably be used to identify you.</p>
 
-		Unity Ads - https://unity3d.com/legal/privacy-policy<br>
+    <h3>Advertising Partners</h3>
+    <p>Those partners usually collect data via their own tools (Software Development Kits or "SDK"). Below is a list of our partners implementing advertising SDKs:</p>
+    <div class="partner-grid">
+      <div class="partner-item">AdColony<a href="https://www.adcolony.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">AppLovin<a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Chartboost<a href="https://answers.chartboost.com/en-us/articles/200780269" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Facebook<a href="https://www.facebook.com/about/privacy" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Fyber<a href="https://www.fyber.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Google AdMob<a href="https://policies.google.com/privacy?hl=en" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">InMobi<a href="https://www.inmobi.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">IronSource<a href="https://developers.ironsrc.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Mintegral<a href="https://www.mintegral.com/en/privacy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Pangle<a href="https://www.pangleglobal.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Tapjoy<a href="https://www.tapjoy.com/legal/tapjoy-users/#privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Unity Ads<a href="https://unity3d.com/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a></div>
+      <div class="partner-item">Vungle<a href="https://vungle.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+    </div>
 
-		Vungle - https://vungle.com/privacy/<br><br>
+    <h3 style="margin-top:1.8rem;">Analytics Partners</h3>
+    <p>Analytic companies provide us with tools and technologies that allow us to better understand how users interact with our services. Our analytics partners:</p>
+    <div class="partner-grid">
+      <div class="partner-item">Adjust<a href="https://www.adjust.com/terms/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></div>
+    </div>
+  </section>
 
-		Analytic companies: that provide us with tools and technologies that allow us to better understand how users
-		interact with our services and will help us improve it. Those partners also usually collect data via their own
-		SDKs. You will find a list of our partners implementing analytical SDKs through our applications hereafter:<br>
+  <section>
+    <h2>How We Protect Your Personal Information</h2>
+    <p>We are committed to protecting your personal information. We implement and maintain reasonable security measures intended to protect against unauthorized use, disclosure, alteration or destruction of the information we collect and maintain. However, please note that, despite our efforts, no data security measures, no method of transmission over the Internet, and no means of electronic or physical storage, is absolutely secure. As such, you acknowledge and accept that we cannot guarantee the absolute security of your information transmitted to, through, or on the Services or via the Internet and that, any such transmission is at your own risk.</p>
+  </section>
 
-		Adjust - https://www.adjust.com/terms/privacy-policy/<br>
+  <section>
+    <h2>Your Choices</h2>
 
-	</p>
+    <h3>Communications &amp; Notifications</h3>
+    <p>You may opt out of receiving promotional communications from us by following the instructions in those communications or by emailing us at <a href="mailto:feedback@kingboat.io">feedback@kingboat.io</a>. If you opt out, we may still send you non-promotional communications, such as those about our ongoing business relations. With your consent, we may send promotional and non-promotional push notifications or alerts to your mobile device. You can deactivate these messages at any time by changing the notification settings on your mobile device.</p>
 
-	<h3>
-		HOW WE PROTECT YOUR PERSONAL INFORMATION
-	</h3>
-	<p>
-		We are committed to protect your personal information. We implement and maintain reasonable security measures
-		intended to protect against unauthorized use, disclosure, alteration or destruction of the information we
-		collect and maintain. However, please note that, despite our efforts, no data security measures, no method of
-		transmission over the Internet, and no means of electronic or physical storage, is absolutely secure. As such,
-		you acknowledge and accept that we cannot guarantee the absolute security of your information transmitted to,
-		through, or on the Services or via the Internet and that, any such transmission is at your own risk.
-	</p>
+    <h3>Your California Privacy Rights</h3>
+    <p>California law permits residents of California to request certain details about how their information is shared with third parties for direct marketing purposes. If you are a California resident, you may request this information once per calendar year by emailing us at <a href="mailto:feedback@kingboat.io">feedback@kingboat.io</a>.</p>
+  </section>
 
+  <section>
+    <h2>Children's Privacy</h2>
+    <p>The Services are not intended for children under the age of 18. Children under the age of 18 must not use the Services for any purpose without first obtaining legally valid parental/guardian consent to this Privacy Policy (both for themselves and on your behalf). We do not knowingly collect personal information from any children under the age of 18 without such consent. We will take reasonable steps to delete such personal information as soon as possible if we learn we have collected any personal information from any children under the age of 18 without any parental/guardian consent. You can also contact us if you learn about such collection.</p>
+  </section>
 
-	<h3>
-		WHAT YOU CAN DO
-		Communications Notifications
+  <section>
+    <h2>Changes to This Policy</h2>
+    <p>We may occasionally make changes to this Privacy Policy. You shall regularly check the "Effective Date" included at the beginning of the document to find out if the Privacy Policy has changed. If we make a material change to the Policy, you will be provided with appropriate notice in accordance with legal requirements. By continuing to use the Services after changes have been posted, you are confirming that you have read, understood and consented to the latest version of this Privacy Policy.</p>
+  </section>
 
-	</h3>
-	<p>
-		You may opt out of receiving promotional communications from us by following the instructions in those
-		communications or by emailing us at admin@unicore-sg.com. If you opt out, we may still send you
-		non-promotional
-		communications, such as those about our ongoing business relations. With your consent, we may send promotional
-		and non-promotional push notifications or alerts to your mobile device.
-		You can deactivate these messages at any time by changing the notification settings on your mobile device.<br>
-		<b>Your California Privacy Rights </b> California law permits residents of California to request certain details
-		about how their information is shared with third parties for direct marketing purposes. If you are a California
-		resident, you may request this information once per calendar year by emailing us at admin@unicore-sg.com.
+  <section>
+    <h2>Contact Us</h2>
+    <p>Thank you for reading our Privacy Policy. If you have any questions or opinions regarding this Privacy Policy, you may contact us:</p>
+    <div class="contact-box">
+      <p><strong>Unicore Tech SG Pte. Ltd.</strong></p>
+      <p>Email: <a href="mailto:feedback@kingboat.io">feedback@kingboat.io</a></p>
+    </div>
+  </section>
 
-	</p>
+</main>
 
-
-	<h3>
-		WHAT ABOUT CHILDREN’S PERSONAL INFORMATION
-	</h3>
-	<p>
-		The Services are not intended for children under the age of 18. Children under the age of 18 must not use the
-		Services for any purpose without first obtaining legally valid parental/guardian consent to this Privacy Policy
-		(both for themselves and on your behalf). We do not knowingly collect personal information from any children
-		under the age of 18 without such consent. We will take reasonable steps to delete such personal information as
-		soon as possible if we learn we have collected any personal information from any children under the age of 18
-		without any parental/guardian consent. You can also contact us if you learn about such collection.
-	</p>
-
-
-	<h3>
-		HOW WE CHANGE THIS PRIVACY POLICY
-	</h3>
-	<p>
-		We may occasionally make changes to this Privacy Policy. You shall regularly check the “Effective Date” included
-		at the beginning of the document to find out if the Privacy Policy has changed. If we make a material change to
-		the Policy, you will be provided with appropriate notice in accordance with legal requirements. By continuing to
-		use the Services after changes have been posted, you are confirming that you have read, understood and consented
-		to the latest version of this Privacy Policy.
-	</p>
-
-
-	<h3>
-		HOW YOU CONTACT US
-	</h3>
-	<p>
-		Thank you for reading our Privacy Policy. If you have any questions or opinions regarding this Privacy Policy,
-		you may contact us at: admin@unicore-sg.com.
-	</p>
-
+<footer>
+  &copy; 2025 Unicore Tech SG Pte. Ltd. &nbsp;·&nbsp; All rights reserved.
+</footer>
 
 </body>
-
 </html>
